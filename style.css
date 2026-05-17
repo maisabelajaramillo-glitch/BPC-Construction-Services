@@ -1,7 +1,6 @@
 /* =========================================
    BPC CONSTRUCTION SERVICES
    PREMIUM BUILD DESIGN
-   FULLY UPDATED + ENHANCED
 ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
@@ -18,7 +17,6 @@
     --text-gray: #666666;
     --border-light: #dddddd;
     --shadow: 0 8px 25px rgba(0,0,0,0.12);
-    --shadow-hover: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 /* RESET */
@@ -26,7 +24,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -46,6 +43,31 @@ a {
 }
 
 /* =========================================
+   TOP BAR
+========================================= */
+.top-bar {
+    background: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 60px;
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    border-bottom: 1px solid #ddd;
+}
+
+.top-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-left span {
+    margin: 0 18px;
+    font-weight: 500;
+}
+
+/* =========================================
    HEADER INFO
 ========================================= */
 .header-info {
@@ -54,7 +76,6 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 25px 60px;
-    border-bottom: 1px solid var(--border-light);
 }
 
 .logo {
@@ -102,7 +123,6 @@ a {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow);
 }
 
 nav {
@@ -161,7 +181,7 @@ nav a.active::after {
 }
 
 .hero-overlay {
-    background: rgba(255,255,255,0.90);
+    background: rgba(255,255,255,0.88);
     display: flex;
     align-items: flex-start;
     padding: 60px;
@@ -196,9 +216,7 @@ nav a.active::after {
     margin-bottom: 35px;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* BUTTON */
 .btn {
     display: inline-block;
     background: var(--primary-red);
@@ -213,7 +231,6 @@ nav a.active::after {
 
 .btn:hover {
     background: var(--hover-red);
-    transform: translateY(-3px);
 }
 
 /* =========================================
@@ -260,8 +277,7 @@ nav a.active::after {
 .services h2,
 .projects h2,
 .about-content h2,
-.company-info h2,
-.contact h2 {
+.company-info h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
@@ -271,7 +287,8 @@ nav a.active::after {
 /* =========================================
    CARDS
 ========================================= */
-.cards {
+.cards,
+.gallery {
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -279,55 +296,19 @@ nav a.active::after {
     margin-top: 40px;
 }
 
-.card {
+.card,
+.project-card {
     background: var(--white);
-    padding: 35px 28px;
-    width: 300px;
+    width: 320px;
     box-shadow: var(--shadow);
     transition: 0.3s;
     border-bottom: 4px solid transparent;
-    border-radius: 6px;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    border-bottom: 4px solid var(--primary-red);
-    box-shadow: var(--shadow-hover);
-}
-
-.card h3 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    font-size: 1.4rem;
-}
-
-.card p {
-    color: var(--text-gray);
-}
-
-/* =========================================
-   PROJECT GALLERY
-========================================= */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.project-card {
-    width: 340px;
-    background: var(--white);
-    box-shadow: var(--shadow);
-    transition: 0.3s;
-    border-radius: 6px;
     overflow: hidden;
+    border-radius: 8px;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+.card {
+    padding: 35px 28px;
 }
 
 .project-card img {
@@ -336,15 +317,24 @@ nav a.active::after {
     object-fit: cover;
 }
 
-.project-card h3 {
+.project-card h3,
+.card h3 {
     font-family: 'Oswald', sans-serif;
-    padding: 18px 15px 8px;
     text-transform: uppercase;
+    margin: 20px 15px 12px;
+    font-size: 1.4rem;
 }
 
-.project-card p {
-    padding: 0 15px 20px;
+.project-card p,
+.card p {
     color: var(--text-gray);
+    padding: 0 15px 25px;
+}
+
+.card:hover,
+.project-card:hover {
+    transform: translateY(-8px);
+    border-bottom: 4px solid var(--primary-red);
 }
 
 /* =========================================
@@ -356,6 +346,14 @@ nav a.active::after {
     margin-bottom: 25px;
     font-size: 1.1rem;
     color: var(--text-gray);
+}
+
+/* =========================================
+   VIEW MORE PROJECTS BUTTON SPACING
+========================================= */
+.view-more {
+    margin-top: 60px;
+    text-align: center;
 }
 
 /* =========================================
@@ -388,7 +386,6 @@ nav a.active::after {
     background: var(--white);
     padding: 40px;
     box-shadow: var(--shadow);
-    border-radius: 6px;
 }
 
 .contact input,
@@ -441,18 +438,10 @@ nav a.active::after {
     font-weight: 600;
     text-transform: uppercase;
     transition: 0.3s;
-    border-radius: 4px;
 }
 
 .contact-btn:hover {
     background: var(--primary-red);
-}
-
-/* MAP */
-.map-container {
-    max-width: 1000px;
-    margin: 30px auto 0;
-    box-shadow: var(--shadow);
 }
 
 /* =========================================
@@ -474,20 +463,20 @@ footer {
 }
 
 /* =========================================
-   BACK TO TOP
+   BACK TO TOP BUTTON
 ========================================= */
 #backToTop {
+    display: none;
     position: fixed;
-    bottom: 25px;
+    bottom: 30px;
     right: 25px;
+    z-index: 999;
     background: var(--primary-red);
-    color: white;
+    color: var(--white);
     border: none;
     padding: 14px 18px;
     font-size: 20px;
     cursor: pointer;
-    display: none;
-    z-index: 999;
     border-radius: 4px;
 }
 
@@ -509,10 +498,17 @@ footer {
 }
 
 @media(max-width: 768px) {
+
+    .top-bar,
     .header-info,
     .main-header {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .header-info {
+        flex-direction: column;
+        text-align: center;
     }
 
     .menu-toggle {
@@ -555,10 +551,6 @@ footer {
     .page-banner h2 {
         font-size: 2.5rem;
     }
-
-    .logo h1 {
-        font-size: 1.5rem;
-    }
 }
 
 @media(max-width: 480px) {
@@ -566,13 +558,14 @@ footer {
         font-size: 2.2rem;
     }
 
-    .project-card,
+    .gallery img,
     .card,
-    .btn {
+    .project-card {
         width: 100%;
     }
 
     .btn {
+        width: 100%;
         text-align: center;
     }
 }
