@@ -1,0 +1,578 @@
+/* =========================================
+   BPC CONSTRUCTION SERVICES
+   PREMIUM BUILD DESIGN
+   FULLY UPDATED + ENHANCED
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ROOT */
+:root {
+    --primary-red: #e53935;
+    --hover-red: #c62828;
+    --dark-nav: #111827;
+    --dark-charcoal: #1f1f1f;
+    --white: #ffffff;
+    --light-gray: #f3f3f3;
+    --section-gray: #f7f7f7;
+    --text-gray: #666666;
+    --border-light: #dddddd;
+    --shadow: 0 8px 25px rgba(0,0,0,0.12);
+    --shadow-hover: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-charcoal);
+    line-height: 1.7;
+    background: var(--white);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   HEADER INFO
+========================================= */
+.header-info {
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    margin-right: 15px;
+}
+
+.logo h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: var(--dark-charcoal);
+    letter-spacing: 1px;
+}
+
+.info-boxes {
+    display: flex;
+    gap: 40px;
+}
+
+.info-item h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.info-item p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+.main-header {
+    background: var(--dark-nav);
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--white);
+    margin-right: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-red);
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--primary-red);
+    transition: width 0.3s;
+    margin-top: 4px;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--white);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+.hero {
+    background:
+        linear-gradient(rgba(20,20,20,0.40), rgba(20,20,20,0.40)),
+        url('hero.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px;
+}
+
+.hero-overlay {
+    background: rgba(255,255,255,0.90);
+    display: flex;
+    align-items: flex-start;
+    padding: 60px;
+    max-width: 720px;
+    box-shadow: var(--shadow);
+}
+
+.hero-line {
+    width: 8px;
+    min-height: 420px;
+    background: var(--primary-red);
+    margin-right: 35px;
+}
+
+.hero-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5.8rem;
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.hero-content h2 span {
+    color: var(--primary-red);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: var(--text-gray);
+    max-width: 560px;
+    margin-bottom: 35px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn {
+    display: inline-block;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 18px 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: var(--hover-red);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   PAGE BANNER
+========================================= */
+.page-banner {
+    background:
+        linear-gradient(rgba(20,20,20,0.60), rgba(20,20,20,0.60)),
+        url('hero.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.page-banner h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+.services,
+.projects,
+.about-content,
+.contact,
+.company-info {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.services,
+.projects,
+.contact {
+    background: var(--section-gray);
+}
+
+.services h2,
+.projects h2,
+.about-content h2,
+.company-info h2,
+.contact h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--white);
+    padding: 35px 28px;
+    width: 300px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+    border-radius: 6px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-bottom: 4px solid var(--primary-red);
+    box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: var(--text-gray);
+}
+
+/* =========================================
+   PROJECT GALLERY
+========================================= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-card {
+    width: 340px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-family: 'Oswald', sans-serif;
+    padding: 18px 15px 8px;
+    text-transform: uppercase;
+}
+
+.project-card p {
+    padding: 0 15px 20px;
+    color: var(--text-gray);
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+.about-content p {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+/* =========================================
+   CTA
+========================================= */
+.cta {
+    background: var(--primary-red);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+.contact form {
+    max-width: 800px;
+    margin: auto;
+    background: var(--white);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid var(--border-light);
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact button {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.contact button:hover {
+    background: var(--hover-red);
+}
+
+.contact-options {
+    margin-top: 40px;
+}
+
+.contact-options h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 24px;
+    background: var(--dark-charcoal);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.contact-btn:hover {
+    background: var(--primary-red);
+}
+
+/* MAP */
+.map-container {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    box-shadow: var(--shadow);
+}
+
+/* =========================================
+   COMPANY INFO
+========================================= */
+.company-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background: #111111;
+    color: var(--white);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    border-radius: 4px;
+}
+
+#backToTop:hover {
+    background: var(--hover-red);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media(max-width: 992px) {
+    .info-boxes {
+        display: none;
+    }
+
+    .hero-content h2 {
+        font-size: 4.5rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .header-info,
+    .main-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 12px 0;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero-overlay {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .hero-line {
+        width: 100%;
+        min-height: 6px;
+        margin-bottom: 25px;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .page-banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .project-card,
+    .card,
+    .btn {
+        width: 100%;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
